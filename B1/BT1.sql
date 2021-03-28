@@ -22,4 +22,12 @@ value
 (8,'gau thang',0901111000,'haha');
 
 select *
+from customer;
+
+select `name`
 from customer
+where city = 'QN';
+
+delete from customer
+where `name` = 'gau thang';
+
