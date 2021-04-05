@@ -1,4 +1,5 @@
 create database products_management;
+-- drop database products_management;
 use products_management;
 create table Products(
 id int primary key auto_increment,
@@ -23,7 +24,7 @@ select *
 from Products
 where id = 4;
 
- create index idx_productname_and_productPrice on Products(productName,productPrice);
+create index idx_productname_and_productPrice on Products(productName,productPrice);
 explain select id,productName,productPrice
 from Products
 where productName = 'Computer';
@@ -52,9 +53,25 @@ call showProducts();
 delimiter // 
 create procedure addNewProduct(aproductCode varchar (45),aproductName varchar(45),aproductPrice double,aproductAmount int,aproductDescription varchar(100),aproductStatus varchar(30))
 begin
-insert into Products(productCode,productName,productPrice,productAmount,productDescription,productStatus)
-value
-(aproductCode,aproductName,aproductPrice,aproductAmount,aproductDescription,aproductStatus),
-end;
-delimiter // ;
+	insert into Products(productCode,productName,productPrice,productAmount,productDescription,productStatus)
+	values
+	(aproductCode,aproductName,aproductPrice,aproductAmount,aproductDescription,aproductStatus);
+end; 
+// delimiter ;
 call addNewProduct('A127','Computer',100.555,1,'Arock','Stocking');
+
+delimiter //
+create procedure editProduct(num int)
+begin
+update Products set productName = 'Lap' where id =num;
+end
+//delimiter ;
+call editProduct(4);
+
+delimiter //
+create procedure deleteProduct(num int)
+begin
+delete from Products where id = num;
+end
+// delimiter ;
+call deleteProduct(4)
