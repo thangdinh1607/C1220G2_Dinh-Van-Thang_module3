@@ -234,7 +234,7 @@ VALUE
 -- -1-- 
 select *
 from NhanVien
-where hoVaTen like 'M%';
+where (hoVaTen like 'M%' or hoVaTen like 'H%') and length(nhanvien.hoVaTen)<=15 ;
 -- --2
 select *
 from KhachHang
@@ -339,20 +339,34 @@ where not exists (select nhanvien.idnhanvien
             between '2017-01-01' and '2019-12-31' and hopdong.idNhanVien = nhanvien.idNhanVien);
 					
 
--- 17	
-update loaikhach
-set loaikhach.tenLoaiKhach = 'Diamond'
-where exists (select loaikhach.tenLoaiKhach , sum(hopdong.tongTien)
-from hopdong
-left join khachhang on khachhang.idKhachHang = hopdong.idKhachHang
-left join loaikhach on khachhang.idLoaiKhach = loaikhach.idLoaiKhach
-group by loaikhach.tenLoaiKhach
-having sum(hopdong.tongTien)> 100);
-          
+-- 17
 
+-- dat 1 view
+update khachhang
+set idLoaiKhach = 2
+where idLoaiKhach = 1 and idKhachHang in
+ (select khachhang.idKhachHang
+		from hopdong
+		inner join khachhang on khachhang.idKhachHang = hopdong.idKhachHang
+		inner join loaikhach on loaikhach.idLoaiKhach = khachhang.idLoaiKhach
+		where year( hopdong.ngayLamHopDong) = 2019
+		group by khachhang.idKhachHang
+		having sum(hopdong.tongtien) > 100);
 
+-- 18
+SET FOREIGN_KEY_CHECKS=0;
+delete khachhang,hopdong,hopdongchitiet
+from khachhang
+inner join hopdong on hopdong.idKhachHang = khachhang.idKhachHang
+inner join hopdongchitiet on hopdong.idHopDong=hopdongchitiet.idHopDong
+where year( hopdong.ngayLamHopDong) < 2016;
+SET FOREIGN_KEY_CHECKS=1;
 
-
+select * 
+		from hopdong 
+		left join khachhang on khachhang.idKhachHang = hopdong.idKhachHang
+		left join loaikhach on loaikhach.idLoaiKhach = khachhang.idLoaiKhach
+		where year( hopdong.ngayLamHopDong) = 2019
 
 
 

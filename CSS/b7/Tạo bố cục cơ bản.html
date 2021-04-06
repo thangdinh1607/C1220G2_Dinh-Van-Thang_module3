@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo bố cục cơ bản</title>
+</head>
+<style>
+    body {
+        font-family: "Times New Roman";
+        font-size: 10px;
+    }
+
+    #main {
+        width: 1000px;
+        padding: 0;
+    }
+
+    #head {
+        height: 60px;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    #head-link {
+        height: 30px;
+        background-color: white;
+        border: 1px dotted green;
+        margin-bottom: 5px;
+    }
+
+    #left {
+        width: 150px;
+        min-height: 400px;
+        float: left;
+        border: 2px dotted red;
+        margin-bottom: 5px;
+
+    }
+
+    #content {
+        width: 600px;
+        min-height: 400px;
+        float: left;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        margin-left: 5px;
+        border: 1px dotted black;
+    }
+
+    #right {
+        width: 228px;
+        min-height: 400px;
+        float: left;
+        border: 2px groove red;
+        margin-bottom: 5px;
+    }
+
+    #footer {
+        width: 1000px;
+        height: 100px;
+        border: 2px dotted red;
+        margin-top: 5px;
+        clear: both;
+    }
+
+    .col-1 {
+        width: 8.33%;
+    }
+
+    .col-2 {
+        width: 16.66%;
+    }
+
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    [class*="col-"] {
+        float: left;
+    }
+
+    .logo {
+        background-color: cadetblue;
+        height: 100%;
+        text-align: center;
+    }
+
+    .banner {
+        background-color: blue;
+        height: 100%;
+        text-align: center;
+    }
+
+    .home {
+        background-color: green;
+        height: 100%;
+    }
+
+    .student {
+        background-color: yellow;
+        height: 100%;
+    }
+
+    .courses {
+        background-color: green;
+        height: 100%;
+    }
+
+    .us {
+        background-color: yellow;
+        height: 100%;
+    }
+
+    .hotnews {
+        background-color: blueviolet;
+        height: 100%;
+        text-align: center;
+    }
+
+    .photoslide {
+        background-color: blue;
+        height: 100%;
+        text-align: center;
+    }
+
+    div > li:hover {
+        background-color: cadetblue;
+    }
+</style>
+<body>
+<div id="main">
+    <div id="head">
+        <div class="col-3 logo">logo</div>
+        <div class="col-9 banner">banner</div>
+    </div>
+    <div id="head-link">
+        <div class="col-1 home">Home</div>
+        <div class="col-1 student">Student</div>
+        <div class="col-1 courses">Courses</div>
+        <div class="col-1 us">AboutUS</div>
+        <div class="col-1 us">ContractUS</div>
+    </div>
+    <div>
+        <div id="left">
+            <div class="col-3">
+                <ul>
+                    <li>Introduction</li>
+                    <li>News</li>
+                    <li>Education</li>
+                    <li>Register</li>
+                    <li>Courses</li>
+                </ul>
+            </div>
+        </div>
+        <div id="content">
+            <div>
+                <div class="col-6 hotnews">HotNews</div>
+                <div class="col-6 photoslide ">Photo Slide</div>
+            </div>
+        </div>
+        <div id="right">
+            <div class="col-2">calendar</div>
+        </div>
+    </div>
+
+    <div id="footer">footer</div>
+</div>
+</body>
+</html>
