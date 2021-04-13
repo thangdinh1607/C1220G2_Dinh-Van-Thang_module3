@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="BT_caculator:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/BT_caculator_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="BT_caculator/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="BT_caculator" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="10_jstl-1.2" />
+          <element id="library" level="project" name="apache-tomcat-9.0.21" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="apache-tomcat-9.0.21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.21.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.21.zip!/apache-tomcat-9.0.21/webapps/docs/appdev/sample/src" />
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.21.zip!/apache-tomcat-9.0.21/webapps/examples/WEB-INF/classes" />
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.21.zip!/apache-tomcat-9.0.21/webapps/examples/WEB-INF/jsp/applet" />
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.21.zip!/apache-tomcat-9.0.21/webapps/examples/jsp/plugin/applet" />
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.21.zip!/apache-tomcat-9.0.21/work/Catalina/localhost/ROOT" />
+      <root url="jar://$PROJECT_DIR$/../../../apache-tomcat-9.0.21.zip!/apache-tomcat-9.0.21/work/Catalina/localhost/test" />
+    </SOURCES>
+  </library>
+</component>
