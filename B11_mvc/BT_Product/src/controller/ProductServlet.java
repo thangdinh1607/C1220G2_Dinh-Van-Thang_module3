@@ -30,6 +30,8 @@ public class ProductServlet extends HttpServlet {
                 updateProduct(request, response);
                 break;
             default:
+                listProduct(request, response);
+
         }
     }
 
@@ -49,14 +51,12 @@ public class ProductServlet extends HttpServlet {
         product.setVendor(vendor);
 
         this.productService.update(id, product);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("product/update.jsp");
         try {
-            requestDispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
+            response.sendRedirect("/product");
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     private void createProduct(HttpServletRequest request, HttpServletResponse response) {
