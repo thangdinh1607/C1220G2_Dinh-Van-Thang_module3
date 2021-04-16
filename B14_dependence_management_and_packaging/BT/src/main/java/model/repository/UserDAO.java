@@ -25,12 +25,8 @@ public class UserDAO implements IUserDAO {
         }
         return connection;
     }
-
-
     @Override
     public void insertUser(User user) {
-
-
         try (
                 Connection connection = getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement
@@ -155,7 +151,7 @@ public class UserDAO implements IUserDAO {
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                String name1=resultSet.getString("name");
+                String name1 = resultSet.getString("name");
                 String email = resultSet.getString("email");
                 String country = resultSet.getString("country");
 
@@ -170,7 +166,7 @@ public class UserDAO implements IUserDAO {
     }
 
     @Override
-    public List<User> sortAllUsers(){
+    public List<User> sortAllUsers() {
         List<User> userList = new ArrayList<>();
         Connection connection = getConnection();
         PreparedStatement preparedStatement = null;
@@ -184,12 +180,12 @@ public class UserDAO implements IUserDAO {
         }
         try {
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 String email = resultSet.getString("email");
                 String country = resultSet.getString("country");
-                User user = new User (id,name,email,country);
+                User user = new User(id, name, email, country);
                 userList.add(user);
             }
         } catch (SQLException throwables) {
