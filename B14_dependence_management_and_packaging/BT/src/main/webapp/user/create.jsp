@@ -17,7 +17,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 text-info text-center">
-            <h1 >Create User</h1>
+            <h1>Create User</h1>
         </div>
     </div>
 
@@ -25,7 +25,7 @@
     <p>${messenger}</p>
     </c:if>
     <form method="post" class="text-center">
-        <p>User Name<input type="text" name="name" placeholder="User name" ></p>
+        <p>User Name<input type="text" name="name" placeholder="User name"></p>
         <p> User Email<input type="text" name="email"></p>
         <p>User Country<input type="text" name="country"></p>
         <input type="submit" value="Create" class="btn btn-primary">
@@ -36,14 +36,14 @@
         <div class="col-4">
             <a href="/users" class="btn btn-primary"> Back to User List</a>
         </div>
-</div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+            integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+            crossorigin="anonymous"></script>
 
 </body>
 </html>
